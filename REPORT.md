@@ -1,9 +1,9 @@
-﻿# âš½ FIFA World Cup 2026 Winner Prediction & Tournament Simulator
+﻿#  FIFA World Cup 2026 Winner Prediction & Tournament Simulator
 ## Comprehensive Project Report & Visual Analysis
 
 ---
 
-### ðŸ‘¥ Project Group & Team Members
+###  Project Group & Team Members
 
 | # | Team Member | Registration / Student ID |
 |:---:|---|:---:|
@@ -14,7 +14,7 @@
 
 ---
 
-## ðŸ“Œ Executive Summary
+##  Executive Summary
 
 This report documents the machine learning modeling, tournament simulation, web application architecture, and Docker containerization for the **FIFA World Cup 2026 Winner Prediction** system.
 
@@ -32,7 +32,7 @@ The system features:
 
 ---
 
-## ðŸ—ï¸ System Architecture & ML Pipeline
+## System Architecture & ML Pipeline
 
 ```mermaid
 flowchart TD
@@ -62,7 +62,7 @@ The XGBoost model identifies the following top factors governing match outcomes:
 
 ---
 
-## ðŸ³ Docker Containerization Architecture
+## Docker Containerization Architecture
 
 The project has been containerized using a secure, production-ready Docker configuration:
 
@@ -91,7 +91,7 @@ flowchart LR
 
 ---
 
-## ðŸ“¸ Application Visual Walkthrough & Screenshots
+## ¸ Application Visual Walkthrough & Screenshots
 
 Below are live screenshots captured from the running containerized application at [http://localhost:8501](http://localhost:8501).
 
@@ -136,7 +136,7 @@ Displays hold-out evaluation metrics against the 2022 World Cup (63.36% test acc
 
 ---
 
-## ðŸ† Detailed Tournament Simulation Results
+## Detailed Tournament Simulation Results
 
 ### 1. Simulated 2026 Group Stage Qualifiers (32 Teams)
 
@@ -204,13 +204,13 @@ FINAL:
 
 ---
 
-## ðŸ§  Machine Learning Deployment & Containerization Analysis
+##  Machine Learning Deployment & Containerization Analysis
 
 This section explores the theoretical principles, architectural trade-offs, dependency challenges, and scalable production deployment strategies for Machine Learning inference services.
 
 ---
 
-### â“ Focal Question Analysis
+###  Focal Question Analysis
 > **Question:** *"If the ML model is already trained and produces accurate predictions, why is containerization still important before deploying it to production?"*
 
 #### 1. The Fallacy of the "Standalone" Trained Model
@@ -250,7 +250,7 @@ flowchart TD
 
 ---
 
-### ðŸ”¬ Environment Compatibility & Dependency Analysis
+###  Environment Compatibility & Dependency Analysis
 
 During development and deployment of this project, several real-world compatibility and runtime hurdles were analyzed and resolved:
 
@@ -265,9 +265,9 @@ During development and deployment of this project, several real-world compatibil
 
 ---
 
-### âš™ï¸ Implementation in This Project: What is Done vs. Future Extensions
+###  Implementation in This Project: What is Done vs. Future Extensions
 
-#### âœ… What Was Implemented in This Project:
+####  What Was Implemented in This Project:
 1. **Multi-Stage Layered Dockerfile:**
    - Base image: `python:3.10-slim`.
    - Dependency caching: `requirements.txt` copied and installed first so that source code changes do not trigger expensive package re-downloads.
@@ -279,7 +279,7 @@ During development and deployment of this project, several real-world compatibil
 3. **Volume Decoupling:**
    - The tournament dataset directory is mounted as a Docker host volume, allowing generated simulation CSV files (`2026_predictions.csv`, `2026_tournament_simulation.csv`) to persist directly onto the host filesystem.
 
-#### ðŸš€ How It Can Be Extended in Production (Gaps & Next Steps):
+#### How It Can Be Extended in Production (Gaps & Next Steps):
 While the current setup provides a self-contained Streamlit application, a production enterprise ML architecture can be extended as follows:
 
 ```mermaid
@@ -303,7 +303,7 @@ flowchart LR
 
 ---
 
-### â˜¸ï¸ Proposing a Scalable Model-Serving Solution Using Kubernetes
+###  Proposing a Scalable Model-Serving Solution Using Kubernetes
 
 When scaling the FIFA 2026 Prediction system to handle high-traffic World Cup match days (millions of concurrent match simulations and fan queries), a single Docker container becomes a bottleneck. Below is the proposed production Kubernetes (K8s) architecture.
 
@@ -429,7 +429,7 @@ spec:
 
 ---
 
-## ðŸ› ï¸ Reproduction & Operation Guide
+##  Reproduction & Operation Guide
 
 ### 1. Using Docker (Recommended)
 ```bash
@@ -460,7 +460,7 @@ streamlit run app.py
 
 ---
 
-### ðŸ“‚ Key Artifacts & File Locations
+###  Key Artifacts & File Locations
 
 - **Report Markdown:** [`fifa_2026_prediction_report.md`](file:///C:/Users/91773/.gemini/antigravity/brain/0ca6b105-72ca-4bda-ba15-a1d67c5a3b36/fifa_2026_prediction_report.md)
 - **Web App Entrypoint:** [`app.py`](file:///c:/Users/91773/Downloads/FIFA-2026-Winner-Prediction-main/app.py)
